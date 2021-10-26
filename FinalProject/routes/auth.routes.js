@@ -1,5 +1,5 @@
 const {Router} = require('express')
-const bcrypt = require('bcryptjs') //позвол хэшировать пароли и сравнивать
+const bcrypt = require('bcryptjs') //позвол. хэшировать пароли и сравнивать
 const config = require('config')
 const jwt = require('jsonwebtoken')
 const {check, validationResult} = require('express-validator')
@@ -9,11 +9,11 @@ const router = Router()
 // /api/auth/pegister
 router.post(
     '/register',
-    [
-        check('email', 'Incorrect email').isEmail(),
-        check('password', 'Incorrect password')
-            .isLength({ min: 6 })
-    ],
+    // [
+    //     check('email', 'Incorrect email').isEmail(),
+    //     check('password', 'Incorrect password')
+    //         .isLength({ min: 6 })
+    // ],
     async (req, res) => {
         try {
             const errors = validationResult(req)
@@ -47,10 +47,10 @@ router.post(
 // /api/auth/login
 router.post(
     '/login',
-    [
-        check('email', 'Enter correct email please').normalizeEmail.isEmail,
-        check('password', 'Enter password please').exists()
-    ],
+    // [
+    //     //check('email', 'Enter correct email please').normalizeEmail.isEmail,
+    //     //check('password', 'Enter password please').exists()
+    // ],
     async (req, res) => {
         try {
             const errors = validationResult(req)
