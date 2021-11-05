@@ -1,5 +1,0 @@
-{
-    "port": "5000",
-    "jwtSecret": "maryia",
-    "mongoUri": "mongodb+srv://maryia:1234vfh@cluster0.smqy3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-}

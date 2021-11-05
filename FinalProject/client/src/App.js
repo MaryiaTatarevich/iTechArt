@@ -1,10 +1,17 @@
+import { BrowserRouter } from 'react-router-dom';
+import 'materialize-css'
+import AppRouter from './components/AppRouter';
+import NavBar from './components/NavBar';
 
-function App() {
-  return (
-    <div>
-      <hi>Hello!</hi>
-    </div>
-  );
+
+const App = () => {
+    return (
+      <BrowserRouter>
+        <NavBar/>
+        <AppRouter/>
+      </BrowserRouter>
+    )
 }
+
 
 export default App;
